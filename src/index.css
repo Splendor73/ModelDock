@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f0c0a;
+  --color-foreground: #f4eee8;
+  --color-card: #191512;
+  --color-card-foreground: #f4eee8;
+  --color-muted: #241e19;
+  --color-muted-foreground: #988f84;
+  --color-border: #322920;
+  --color-primary: #80783a;
+  --color-primary-foreground: #15120d;
+  --color-accent: #272019;
+  --color-accent-foreground: #f4eee8;
+  --color-destructive: #ef5a5a;
+  --color-success: #7d785a;
+  --color-warning: #9a8bbc;
+  --font-sans: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --surface-app: #0f0c0a;
+  --surface-shell: #12100e;
+  --surface-panel: #1a1613;
+  --surface-panel-2: #201a16;
+  --surface-muted: #251f1a;
+  --surface-raised: #2d251e;
+  --border-soft: rgba(122, 119, 112, 0.18);
+  --border-strong: rgba(122, 119, 112, 0.32);
+  --text-primary: #f4eee8;
+  --text-muted: #b4aca1;
+  --text-tertiary: #837b72;
+  --color-secondary: #7d785a;
+  --color-tertiary: #9a8bbc;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--color-border);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(128, 120, 58, 0.12), transparent 24%),
+    radial-gradient(circle at 78% 14%, rgba(154, 139, 188, 0.1), transparent 16%),
+    linear-gradient(180deg, #15110f 0%, #0f0c0a 24%, #0c0908 100%);
+  color: var(--text-primary);
+  font-family: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+}
+
+#root {
+  position: relative;
+}
+
+#root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(128, 120, 58, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 120, 58, 0.04) 1px, transparent 1px);
+  background-size: 132px 132px;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 88%);
+  opacity: 0.34;
+}
+
+body ::selection {
+  background: rgba(128, 120, 58, 0.34);
+}
+
+.font-headline {
+  font-family: "Epilogue", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-label {
+  font-family: "Lexend", ui-sans-serif, system-ui, sans-serif;
+}
+
+code,
+pre,
+.font-mono {
+  font-family:
+    "IBM Plex Mono",
+    "SFMono-Regular",
+    "SF Mono",
+    ui-monospace,
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(122, 119, 112, 0.35);
+  border-radius: 999px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
