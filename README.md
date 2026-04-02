@@ -98,13 +98,30 @@ ModelDock/
 ## Local Development Setup
 
 ### Prerequisites
-
 - Node.js 20+ recommended
 - npm
-- Rust toolchain for Tauri
+- Rust toolchain for Tauri (`cargo`)
 - Tauri system prerequisites for your OS
 - Python 3.11+ recommended
 - Ollama installed locally and available at `http://localhost:11434`
+
+### Rust / Cargo (for Tauri)
+Install Rust (this provides `cargo`, which `tauri dev` needs):
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+cargo --version
+```
+
+If you are on Linux/WSL, you also need Tauri's native system dependencies (these are required for the Tauri GUI build, not just Rust):
+
+```bash
+sudo apt update
+sudo apt install -y \
+  pkg-config build-essential curl wget file libssl-dev libxdo-dev \
+  libgtk-3-dev libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev
+```
 
 ### Frontend Dependencies
 
